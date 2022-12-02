@@ -1,0 +1,179 @@
+/* Barra de menu */
+
+.navbar {
+  background-color: #06821A;
+  color: #ffffff;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%), inset 0 -1px 0 rgb(0 0 0 / 10%);
+}
+
+.nav-item .nav-link {
+  color: #fff;
+}
+
+.navbar-brand {
+  padding-right: 6em;
+}
+
+
+/* Estilo de botones (General)*/
+
+.custom-buttons {
+  background-color: #4285F4 !important;
+  color: #fff !important;
+  padding: 0.5em 1.2em !important;
+  border-radius: 5em !important;
+  border-color: #4285F4 !important;
+}
+
+/* Default height for small devices */
+#intro-example {
+  height: 400px;
+}
+
+/* Height for devices larger than 992px */
+@media (max-width: 992px) {
+  * {
+    text-align: center;
+  }
+
+  #intro-example {
+    height: 600px;
+  }
+
+  /* For mobile phones: */
+  [class*="col-md-4"] {
+    width: 50%;
+    padding: 2em;
+  }
+
+  .content-image {
+    max-width: 23em;
+    padding-bottom: 2em;
+  }
+
+  
+  .section-left .row .col-md-6 p, 
+  .section-right .row .col-md-6 p {
+    font-size: 0.9em;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  /* For mobile phones: */
+  [class*="col-md-4"] {
+    width: 100%;
+    padding: 2em;
+  }
+
+  .promos-icons {
+    padding: 1.5em 0 1em 0 !important;
+    display: inline;
+  }
+
+  .card {
+    text-align: center;
+  }
+
+  .content-image {
+    max-width: 20em;
+    padding-bottom: 2em;
+    
+  }
+
+}
+
+/* Imagen principal - Mensaje de bienvenida */
+.mask {
+  width: 100%;
+  text-align: center;
+  height: 35em;
+  background: rgb(205, 255, 128);
+  background: linear-gradient(180deg, rgba(205, 255, 128, 1) 0%, rgba(243, 254, 226, 1) 100%);
+}
+
+.social-links {
+  padding: 1em;
+  display: inline;
+  border-radius: 1em;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #F4F4F4;
+}
+
+
+/* Header de la pagina */
+
+.mask h1 {
+  font-size: calc(1.325rem + 3vw);
+
+}
+
+.mask h5 {
+  font-size: calc(0.725rem + 1.3vw);
+  font-weight: 380;
+}
+
+/* header > Iconos de redes sociales */
+
+.fab {
+  text-decoration: none;
+  border-radius: 100%;
+}
+
+.fa-whatsapp,
+.fa-telegram {
+  color: #646464;
+  vertical-align: middle;
+}
+
+.social-links a:hover {
+  color: #858585;
+}
+
+
+.fa-telegram:hover,
+.fa-whatsapp:hover {
+  color: rgba(255, 255, 255, 1)
+}
+
+.banner {
+  color: #ADFF2F;
+}
+
+/* Promos */
+
+.promos {
+
+  background: rgb(243, 254, 226);
+  background: linear-gradient(180deg, rgba(243, 254, 226, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.promos-icons {
+  padding: 2em 0 1em 0;
+  display: inline;
+  border-radius: 1em;
+}
+
+.card {
+  text-align: center;
+}
+
+/* Secciones */
+
+.section-content {
+  display: flex;
+  height: 40em;
+  align-items: center;
+}
+
+.section-left {
+  padding: 3em 0 5em 0;
+  background-color: #eeeeee;
+}
+
+.section-right {
+  background: rgb(238,238,238);
+background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 1%, rgba(255,255,255,1) 99%, rgba(238,238,238,1) 100%);
+  padding: 3em 0 5em 0;
+}
