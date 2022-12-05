@@ -42,11 +42,22 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#Normatividad">Normatividad</a>
                     </li>
+
+                    <!-- Boton de ingreso -->
                     <li class="nav-item">
-                        <a class="nav-link disabled">Premiun</a>
+                        <button type="button" class="btn btn-secondary login-button" style="margin: 0 6em 0 1em;list-style: none;">Ingresar</button>
                     </li>
                 </ul>
-                <li class="nav-item dropdown" style="padding-right: 6em;list-style: none;">
+                <script>
+                <? php
+                    if ($this -> session -> userdata('username') == TRUE) { }
+                ?>
+
+                </script>
+               
+
+                <!-- Opciones de usuario -->
+                <li class="nav-item dropdown" style="padding: 0 6em 0 1em;list-style: none;">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Ajustes
@@ -54,10 +65,10 @@
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
                         <button class="dropdown-item" type="button">Editar perfil</button>
                         <button class="dropdown-item" type="button">Soporte</button>
+                        <hr class="dropdown-divider">
                         <button class="dropdown-item" type="button">Cerrar sesión</button>
                     </div>
                 </li>
-
             </div>
         </div>
 
