@@ -51,8 +51,8 @@
     padding-bottom: 2em;
   }
 
-  
-  .section-left .row .col-md-6 p, 
+
+  .section-left .row .col-md-6 p,
   .section-right .row .col-md-6 p {
     font-size: 0.9em;
   }
@@ -79,7 +79,7 @@
   .content-image {
     max-width: 20em;
     padding-bottom: 2em;
-    
+
   }
 
 }
@@ -173,7 +173,35 @@
 }
 
 .section-right {
-  background: rgb(238,238,238);
-background: linear-gradient(180deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 1%, rgba(255,255,255,1) 99%, rgba(238,238,238,1) 100%);
+  background: rgb(238, 238, 238);
+  background: linear-gradient(180deg, rgba(238, 238, 238, 1) 0%, rgba(255, 255, 255, 1) 1%, rgba(255, 255, 255, 1) 99%, rgba(238, 238, 238, 1) 100%);
   padding: 3em 0 5em 0;
+}
+
+/* Contaor de visitas */
+
+.counter-section span.counter {
+  font-size: 40px;
+  color: #000;
+  line-height: 60px;
+  display: block;
+  letter-spacing: 2px
+}
+
+.counter-title {
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase
+}
+
+.counter-icon {
+  top: 25px;
+  position: relative;
+}
+
+/* Iconos de seccion de visitas */
+
+.medium-icon {
+  font-size: 40px !important;
+  margin-bottom: 10px !important;
 }

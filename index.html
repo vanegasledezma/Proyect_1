@@ -14,6 +14,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <!-- Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!--Button icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -32,30 +34,27 @@
             <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Active</a>
+                        <a class="nav-link" href="#Servicios">Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#QuienesSomos">Quienes somos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Linked</a>
+                        <a class="nav-link" href="#Normatividad">Normatividad</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Linked</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
+                        <a class="nav-link disabled">Premiun</a>
                     </li>
                 </ul>
                 <li class="nav-item dropdown" style="padding-right: 6em;list-style: none;">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Dropdown
+                        Ajustes
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
-                        <button class="dropdown-item" type="button">Action</button>
-                        <button class="dropdown-item" type="button">Another action</button>
-                        <button class="dropdown-item" type="button">Something else here</button>
+                        <button class="dropdown-item" type="button">Editar perfil</button>
+                        <button class="dropdown-item" type="button">Soporte</button>
+                        <button class="dropdown-item" type="button">Cerrar sesión</button>
                     </div>
                 </li>
 
@@ -92,12 +91,13 @@
 </header>
 
 <body>
-    <div class="promos">
+    
+    <div class="promos" id="Servicios">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
-                        <div class="promos-icons">
+                        <div class="promos-icons" >
                             <i class="fa-solid fa-screwdriver-wrench fa-4x col-2s"></i>
                         </div>
 
@@ -161,11 +161,11 @@
         <br>
         <!-- Secciones -->
 
-        <section class="section-left">
+        <section class="section-left" id="QuienesSomos">
             <div class="container mt-5">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2 class="display-5 mb-3 fw-semibold lh-sm">Lorem Ipsum</h2><br>
+                        <h2 class="display-5 mb-3 fw-semibold lh-sm">¿Quienes somos?</h2><br>
                         <p class="lead fw-normal"> Lorem ipsum dolor sit amet consectetur adipiscing elit quam
                             metus, rhoncus nunc laoreet tincidunt justo nibh curae vitae. Sagittis nisi tempor
                             condimentum
@@ -191,7 +191,7 @@
                         <img class="content-image" src="img/software.png">
                     </div>
                     <div class="col-md-6">
-                        <h2 class="display-5 mb-3 fw-semibold lh-sm">Lorem Ipsum</h2><br>
+                        <h2 class="display-5 mb-3 fw-semibold lh-sm">Nuestra trayectoria</h2><br>
                         <p class="lead fw-normal text"> Lorem ipsum dolor sit amet consectetur adipiscing elit quam
                             metus, rhoncus nunc laoreet tincidunt justo nibh curae vitae. Sagittis nisi tempor
                             condimentum
@@ -203,16 +203,16 @@
                             pellentesque habitant erat iaculis mi, ultrices molestie mus porttitor pretium
                             ut purus quisque nunc, imperdiet donec facilisis justo tellus blandit lacinia.</p>
                     </div>
-                   
+
                 </div>
             </div>
         </section>
 
-        <section class="section-left">
+        <section class="section-left" id="Normatividad">
             <div class="container mt-5">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2 class="display-5 mb-3 fw-semibold lh-sm">Lorem Ipsum</h2><br>
+                        <h2 class="display-5 mb-3 fw-semibold lh-sm">Normatividad</h2><br>
                         <p class="lead fw-normal"> Lorem ipsum dolor sit amet consectetur adipiscing elit quam
                             metus, rhoncus nunc laoreet tincidunt justo nibh curae vitae. Sagittis nisi tempor
                             condimentum
@@ -230,11 +230,81 @@
                 </div>
             </div>
         </section>
+
+        <!-- Contador de visitas-->
+
+        <section class="wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
+            <div class="container mt-5 mb-5 text-center">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated"
+                        data-wow-duration="600ms"
+                        style="visibility: visible; animation-duration: 600ms; animation-name: fadeInUp;">
+                        <i class="fa-solid fa-star medium-icon"></i>
+                        <span id="anim-number-pizza" class="counter-number"></span>
+                        <span class="timer counter alt-font appear" data-to="980" data-speed="7000">2800</span>
+                        <p class="counter-title">Comentarios favorables</p>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated"
+                        data-wow-duration="600ms"
+                        style="visibility: visible; animation-duration: 600ms; animation-name: fadeInUp;">
+                        <i class="fa fa-heart medium-icon"></i>
+                        <span class="timer counter alt-font appear" data-to="980" data-speed="7000">980</span>
+                        <span class="counter-title">Reconocimientos</span>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated"
+                        data-wow-duration="600ms"
+                        style="visibility: visible; animation-duration: 600ms; animation-name: fadeInUp;">
+                        <i class="fa fa-anchor medium-icon"></i>
+                         <span class="timer counter alt-font appear" data-to="810" data-speed="7000">810</span>
+                        <span class="counter-title">Total Soportes</span>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated"
+                        data-wow-duration="600ms"
+                        style="visibility: visible; animation-duration: 600ms; animation-name: fadeInUp;">
+                        <i class="fa fa-user medium-icon"></i>
+                        <span class="timer counter alt-font appear" data-to="600" data-speed="7000">600</span>
+                       <span class="counter-title">Clientes atendidos</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
 </body>
 
 
-<footer>
-    &lt;footer&gt;
+<footer class="bg-light text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright:
+        <a class="text-dark" href="#">Creado por: Andres Vanegas Ledezma. vanegasledezma@gmail.com</a>
+    </div>
+    <!-- Copyright -->
 </footer>
+
+<!--JQuery para efecto de contador de visitas-->
+
+<script>
+    $(document).ready(function () {
+
+        $('.counter').each(function () {
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 3000,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+
+    }); 
+</script>
+
+
 
 </html>
