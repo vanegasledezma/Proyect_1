@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/login.css">
+
+    <!--Boostrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!--Button icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+
+<body class="text-center d-flex justify-content-center mt-5">
+    <form>
+        <div class="container">
+            <div class="login-form p-5 bg-white  text-secondary" style="width: 25em;">
+                <div class="justify-content-center">
+                    <img src="img/logo.png" class="mb-2" width="72" height="57">
+                </div>
+                <h2 class="mb-3 fw-semibold">Ingresar</h2>
+                <div class="input-group mt-4">
+                    <div class="input-group-text">
+                        <i class="fa-regular fa-user" alt="username-icon"></i>
+                    </div>
+                    <input class="form-control" type="text" placeholder="Digita tu usuario">
+                </div>
+
+                <div class="input-group mt-2">
+                    <div class="input-group-text">
+                        <i class="fa-solid fa-lock" alt="password-icon" style="height: 1rem;"></i>
+                    </div>
+                    <input class="form-control" type="password" placeholder="Ahora, digita tu contraseña">
+                </div>
+
+                <div class="d-flex justify-content-around mt-2">
+                    <div class="d-flex align-items-center gap-1">
+                        <input class="form-check-input" type="checkbox" />
+                        <div class="pt-1" style="font-size: 0.9em;"> Recordarme</div>
+                    </div>
+                    <div>
+                        <a style="font-size: 0.9em;"
+                            class="text-decoration-none text-success fw-semibold fst-italic">¿Olvidaste
+                            tu contraseña?</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="btn custom-buttons btn-success w-100 mt-3">Ingreso</div>
+                    <div class="d-flex gap-1 justify-content-center mt-1">
+                        <div>
+                            ¿No tienes una cuenta?
+                        </div>
+                        <a class="text-decoration-none text-success fw-semibold" href="#">Registrate!</a>
+                    </div>
+                    <div class="p-3">
+                        <div class="border-bottom text-center" style="height:0.9rem;">
+                            <span class="bg-white px-3">o</span>
+                        </div>
+                    </div>
+
+                    <div class="btn d-flex gap-2 justify-content-center border">
+                        <img src="img/google-icon.svg" alt="google-icon" style="height: 1.6em;" />
+                        <div>Continuar con Google</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

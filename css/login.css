@@ -1,0 +1,24 @@
+body {
+    background: #cfcfcf !important;
+}
+
+.custom-buttons {
+    background-color: #4285F4 !important;
+    color: #fff !important;
+    padding: 0.5em 1.2em !important;
+    border-radius: 5em !important;
+    border-color: #4285F4 !important;
+}
+
+.login-form {
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
+    border-radius: 0.5em;
+}
+
+@media only screen and (max-width: 768px) {
+    .login-form {
+   
+        border: 1px solid red;
+    }
+
+}
