@@ -30,11 +30,27 @@
 /* Estilo de botones (General)*/
 
 .custom-buttons {
-  background-color: #4285F4 !important;
-  color: #fff !important;
   padding: 0.5em 1.2em !important;
   border-radius: 5em !important;
+}
+
+.custom-buttons-index, 
+.custom-button-next {
+  background-color: #4285F4 !important;
+  color: #fff !important;
   border-color: #4285F4 !important;
+}
+
+.custom-button-end {
+  background-color: #98fb98 !important;
+  color: #004603 !important;
+  border-color: #32cd32 !important;
+}
+
+.custom-button-previous {
+  background-color: #fcfcfc !important;
+  color: #212121 !important;
+  border-color: #696969 !important;
 }
 
 /* Default height for small devices */
