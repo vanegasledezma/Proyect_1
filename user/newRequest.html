@@ -20,13 +20,6 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/request.css">
 
-    <!-- Js -->
-
-    <script src="../js/script.js"></script>
-    <!-- Static App Form Collection Script -->
-    <script src="https://static.app/js/static-forms.js" type="text/javascript"></script>
-
-
 
     <nav class="navbar navbar-expand-lg bd-navbar sticky-top">
         <div class="container-fluid">
@@ -51,7 +44,7 @@
                     <!-- Boton de ingreso -->
                     <li class="nav-item">
                         <button type="button" class="btn btn-secondary login-button"
-                            style="margin: 0 6em 0 1em;list-style: none;"><a href="login.html">Ingresar</a></button>
+                            style="margin: 0 6em 0 1em;list-style: none;"><a href="../login.html">Ingresar</a></button>
                     </li>
                 </ul>
             </div>
@@ -60,7 +53,7 @@
 </head>
 
 <body>
-    <div class="cajaPrincipal mt-5 text-center container-md">
+    <div class="cajaPrincipal mt-5 text-center justify-content-center container-md">
         <div class="row">
             <!-- Formulario-->
             <form class="needs-validation" id="form-wrapper" method="post" name="form-wrapper" novalidate="">
@@ -68,9 +61,9 @@
                         <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 0%"></div>
                     </div>
                     <div class="container pt-3">
-                        <div class="row step">
-                            <h4 class="mt-4">Por favor, selecciona el/los elemento(s) que presentan fallas</h4>
-                            <div class="col-md-4 mb-4 box">
+                        <div class="step">
+                            <h4 class="mt-2">Por favor, selecciona el/los elemento(s) que presentan fallas</h4>
+                            <div class="col-md-4 box">
                                 <label class="image-checkbox">
                                     <img src="../img/laptop.svg" style="width: 3.5em;">
                                     <input type="checkbox" name="image[]" value="" />
@@ -88,7 +81,7 @@
                                 </label>
                             </div>
 
-                            <div class="col-md-4 mb-4 box disabled">
+                            <div class="col-md-4 mb-4 box">
                                 <label class="image-checkbox">
                                     <img src="../img/printer.svg" style="width: 3.5em;">
                                     <input type="checkbox" name="image[]" value="" />
@@ -104,7 +97,7 @@
                         </h4>
                         <div class="mt-2">
                             <label class="form-label">Escribe aqui tu nombre:</label>
-                            <input class="form-control" id="address" name="address" type="text">
+                            <input class="form-control" id="address" name="address" type="text" required="required">
                         </div>
                     </div>
 
@@ -127,18 +120,23 @@
                     </div>
                     <div class="step">
                         <h4>Elige el tipo de soporte que requieres</h4>
-                        <div class="row">
-
-                            <div class="form-group col-md-4">
-                                <label for="inputState">State</label>
-                                <select id="inputState" class="form-control">
-                                    <option selected>Selecciona...</option>
-                                    <option>Atención remota</option>
-                                    <option>Atención en sitio</option>
-                                    <option>...</option>
-                                </select>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group text-center">
+                                        <label for="inputState"></label>
+                                        <select id="inputState" class="form-control">
+                                            <option selected>Selecciona...</option>
+                                            <option>Atención remota</option>
+                                            <option>Atención en sitio</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                </div>
                             </div>
-
                         </div>
                     </div>
 
@@ -154,10 +152,21 @@
                     <div class="step">
                         <h4>Elige la fecha que deseas la visita
                         </h4>
-                        <div class="mt-2">
-                            <label class="form-label">Selecciona una fecha</label>
-                            <input class="form-control" id="date" name="date" type="date">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                </div>
+                                <div class="col-6">
+                                    <div class="mt-2">
+                                        <label class="form-label">Selecciona una fecha</label>
+                                        <input class="form-control" id="date" name="date" type="date">
+                                    </div>
+                                </div>
+                                <div class="col">
+                                </div>
+                            </div>
                         </div>
+
                     </div>
 
                     <div class="step">
@@ -171,19 +180,17 @@
 
                     <div id="success">
                         <div class="mt-5">
-                            <h4>Success! We'll get back to you ASAP!</h4>
-                            <p>Meanwhile, clean your hands often, use soap and water, or an
-                                alcohol-based
-                                hand rub, maintain a safe distance from anyone who is coughing or
-                                sneezing
-                                and always wear a mask when physical distancing is not possible.</p>
+                            <h4>Perfecto!</h4>
+                            <p>Hemos registrado tu solicitud. Gracias por confiar en nosotros. <br>Dentro de unos minutos, te contactaremos para 
+                                concretar detalles y brindarte una solución. 
+                            </p>
                             <a class="back-link" href="">Go back from the beginning ➜</a>
                         </div>
                     </div>
 
                     <div class="mb-3 pt-4" id="cajaBotones">
                         <input type="button" id="botonAnterior" class="custom-buttons custom-button-previous btn" value="Anterior" />
-                        <input type="button" id="botonSiguiente" class="submit custom-buttons custom-button-next btn" value="Siguiente" />
+                        <input type="button" onclick="myFunction()" id="botonSiguiente" class="submit custom-buttons custom-button-next btn" value="Siguiente" />
                         <input type="submit" id="botonFinalizar" class="submit custom-buttons custom-button-end btn fw-semibold" value="Hecho" />
                     </div>
             </form>
@@ -194,7 +201,16 @@
         <div class="preloader-section section-left"></div>
         <div class="preloader-section section-right"></div>
     </div>
-
+    <script src="../js/script.js">
+    </script>
+<!-- Static App Form Collection Script -->
+<script src="https://static.app/js/static-forms.js" type="text/javascript"></script>
+<!-- Static App Form Collection Script -->
+<script src="https://static.app/js/static-forms.js" type="text/javascript"></script>
+<!-- Static App Form Collection Script -->
+<script src="" type="text/javascript"></script>
+<!-- Static App Form Collection Script -->
+<script src="" type="text/javascript"></script>
     <script>// image gallery
         // init the state from the input
         $(".image-checkbox").each(function () {
@@ -213,6 +229,11 @@
 
             e.preventDefault();
         });
+
+        function myFunction() {
+  document.getElementById("address").required = true;
+  document.getElementById("demo").innerHTML = "The required property was set. The text field must now be filled out before submitting the form.";
+}
         //# sourceURL=pen.js
     </script>
 </body>

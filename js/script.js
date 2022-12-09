@@ -11,18 +11,16 @@ const progress = (value) => {
     let preloader = document.getElementById('preloader-wrapper');
     let bodyElement = document.querySelector('body');
     let succcessDiv = document.getElementById('success');
-
-    console.log(form);
   
-    form.onsubmit = () => { return false; }
+    form.onsubmit = () => { return false }
  
     let current_step = 0;
     let stepCount = 6
     step[current_step].classList.add('d-block');
     if(current_step == 0){
       botonAnterior.classList.add('d-none');
-      botonSiguiente.classList.add('d-none');
-      botonFinalizar.classList.add('d-inline-block');
+      botonFinalizar.classList.add('d-none');
+      botonSiguiente.classList.add('d-inline-block');
     }
  
  
@@ -66,8 +64,8 @@ const progress = (value) => {
             botonFinalizar.classList.add('d-none');
             botonSiguiente.classList.remove('d-none');
             botonSiguiente.classList.add('d-inline-block');
-            botonSiguiente.classList.remove('d-none');
-            botonSiguiente.classList.add('d-inline-block');
+            botonAnterior.classList.remove('d-none');
+            botonAnterior.classList.add('d-inline-block');
          } 
       }
  
@@ -79,12 +77,12 @@ const progress = (value) => {
     });
  
  
- submitBtn.addEventListener('click', () => {
+    botonFinalizar.addEventListener('click', () => {
      preloader.classList.add('d-block');
  
      const timer = ms => new Promise(res => setTimeout(res, ms));
  
-     timer(3000)
+     timer(1000)
        .then(() => {
             bodyElement.classList.add('loaded');
        }).then(() =>{
@@ -99,4 +97,7 @@ const progress = (value) => {
        })
        
  });
+
+
+
  

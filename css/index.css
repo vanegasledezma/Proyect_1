@@ -106,7 +106,7 @@
   }
 
   .content-image {
-    max-width: 18em;
+    max-width: 14em;
     padding-bottom: 2em;
   }
 
@@ -265,10 +265,15 @@
   position: absolute;
   color: #4A79A3;
   background-color: #fff;
-  padding: 10px;
   top: 0;
   right: 0;
 }
 .image-checkbox-checked .fa {
   display: block !important;
+}
+
+.box {
+  max-width: 12em;
+  display: inline-block;
+  padding-top: 1em;
 }
