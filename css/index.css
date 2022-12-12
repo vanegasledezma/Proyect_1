@@ -1,8 +1,7 @@
 /* Barra de menu */
 
 .navbar {
-  background-color: #06821A;
-  color: #ffffff;
+  background-color: #252440;
   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%), inset 0 -1px 0 rgb(0 0 0 / 10%);
 }
 
@@ -12,12 +11,15 @@
 
 .navbar-brand {
   padding-right: 6em;
+  font-size: 1.5em !important;
+  color: #fff !important;
+  text-decoration: double !important;
 }
 
 .login-button {
-  background-color: #a9ff9e !important;
-  color: #212121 !important;
-  border: 1px solid #87ff77 !important;
+  background-color: #72cb10 !important;
+  color: #ffffff  !important;
+  border: 1px solid #72cb10 !important;
   padding: 0.3em 1em 0.3em 1em !important;
 }
 
