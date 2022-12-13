@@ -11328,5 +11328,15 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
   }
 }
 
-/* NAVBAR */
+/* sidebar */
 
+.perfil img {
+  
+  border-radius: 50%;
+  max-width: 6rem;
+  margin: 3em 1em 1em 1em;
+}
+
+.fa-icon {
+  padding-right: 0.5em;
+}
