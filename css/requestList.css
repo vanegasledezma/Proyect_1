@@ -10,11 +10,22 @@
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%), inset 0 -1px 0 rgb(0 0 0 / 20%);
     border-radius: 0.5em;
 }
+/* VENTANA MODAL*/
 
+.modal-header {
+    background-color: #f4f4f4;
+}
+
+.disabled {
+    background: #f7f7f7 !important;
+    font-size: 0.9em;
+    padding: 0.8em;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1) !important; 
+}
 @media (max-width: 600px) {
    
     .table-mark {
-        font-size: 0.5rem;
+        font-size: 0.6rem;
     }
 
     .option-buttons {
@@ -37,8 +48,9 @@
 
 @media (max-width: 300px) {
    
-    .table-mark {
-        font-size: 0.3em;
+    .table-mark tr {
+        font-size: 0.6em;
+        width: 1em;
     }
 
 }

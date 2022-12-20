@@ -136,42 +136,72 @@
 
                                         </div>
                                         <div class="col-md">
-                                         <a href="#" data-toggle="tooltip" data-bs-toggle="modal"
-                                                data-bs-target="#exampleModal" data-bs-whatever="@mdo"
-                                                data-placement="top" title="Editar">
+                                            <a href="#" data-toggle="tooltip" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal" data-bs-whatever="0001"
+                                                data-bs-state="en proceso" data-bs-description="No me prende el equipo" 
+                                                data-bs-recent = "Cordialmente se intenta llamar al funcionario pero no contesto. (Vie. 19/08/22 16:39:32)" data-placement="top" title="Editar">
                                                 <i class="fa-solid fa-pencil" textarea="Editar"></i>
-                                        </a> 
+                                            </a>
                                         </div>
                                     </div>
                                     <!-- Modal -->
                                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                                         aria-labelledby="exampleModal">
-                                        <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-dialog ">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                                                    <h5 class="modal-title w-100 text-center" id="exampleModalLabel">New
+                                                        message</h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                         aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
                                                     <form>
                                                         <div class="mb-3">
-                                                            <label for="recipient-name"
-                                                                class="col-form-label">Recipient:</label>
-                                                            <input type="text" class="form-control" id="recipient-name">
-                                                        </div>
-                                                        <div class="mb-3">
                                                             <label for="message-text"
-                                                                class="col-form-label">Message:</label>
-                                                            <textarea class="form-control" id="message-text"></textarea>
+                                                                class="col-form-label fw-semibold">Descripción</label>
+                                                            <textarea disabled class="disabled description-text form-control " id="description-text"></textarea>
+                                                        </div>
+                                                        <div class="row mb-2 text-center">
+                                                            <div class="col-6">
+                                                                <p >Elementos: <span class="fw-semibold text-danger"> bateria</span></p >
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <p > # Elementos: <span class="fw-semibold text-danger"> 06</span></p >
+                                                            </div>
+                                                        </div>
+                                                        <label for="message-text "
+                                                                class="col-form-label fw-semibold mb-2">Solicitante</label>
+                                                        <div class="row mb-3 text-center table-mark m-1">
+                                                            
+                                                                <div class="col-6" >
+                                                                    <span class="fw-semibold text-warning">Arnulfo fernandez</span><br>
+                                                                    <span>Calle 3 # 24 - 45 barrio mirador</span>
+                                                                    <span class="fw-semibold text-success">311234567</span>
+                                                            
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <span class="fw-semibold">arnulfo82@gmail.com</span><br>
+                                                                    <span>Visita: 27/ago/2022</span>
+                                                                    <span class="fw-semibold text-success">Remoto</span>
+                                                                </div>                                                           
+                                                        </div> 
+                                                        <div class="mb-3">
+                                                            
+                                                            <label for="message-text"
+                                                                class="col-form-label fw-semibold">Novedades</label>
+                                                            <textarea disabled class="disabled recent-text form-control" id="recent-text"></textarea>
+                                                            <a class="link-primary fs-6 fw-light" href>Ver todas las novedades</a>
                                                         </div>
                                                     </form>
                                                 </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-bs-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Send message</button>
+                                                <div class="modal-footer" style="justify-content: center;">
+                                                            <button type="button" class="btn btn-secondary custom-buttons"
+                                                            data-bs-dismiss="modal">Editar</button>
+                                                        <button type="button" class="btn btn-primary custom-buttons">Guardar</button>
+                                                        <button type="button" class="btn btn-primary custom-buttons btn-success"> Factura</button>
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -325,19 +355,27 @@
             // Button that triggered the modal
             var button = event.relatedTarget
             // Extract info from data-bs-* attributes
-            var recipient = button.getAttribute('data-bs-whatever')
+            const recipient = button.getAttribute('data-bs-whatever')
+            const description = button.getAttribute ('data-bs-description')
+            const recent = button.getAttribute ('data-bs-recent')
+            var state = button.getAttribute('data-bs-state')
             // If necessary, you could initiate an AJAX request here
             // and then do the updating in a callback.
             //
             // Update the modal's content.
             var modalTitle = exampleModal.querySelector('.modal-title')
+            var descriptionText = exampleModal.querySelector('.description-text')
+            var recentText = exampleModal.querySelector('.recent-text')
             var modalBodyInput = exampleModal.querySelector('.modal-body input')
 
-            modalTitle.textContent = 'New message to ' + recipient
+            //modalTitle.classList.add("text-success")
+            modalTitle.textContent = 'Solicitud # ' + recipient + ' (' + state + ')'
+            descriptionText.textContent = description
+            recentText.textContent = recent
             modalBodyInput.value = recipient
         })
 
-</script>
+    </script>
     <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js"
         integrity="sha384-q9CRHqZndzlxGLOj+xrdLDJa9ittGte1NksRmgJKeCV9DrM7Kz868XYqsKWPpAmn"
@@ -345,6 +383,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
-</body >
+</body>
 
 </html>
