@@ -10,6 +10,7 @@
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%), inset 0 -1px 0 rgb(0 0 0 / 20%);
     border-radius: 0.5em;
 }
+
 /* VENTANA MODAL*/
 
 .modal-header {
@@ -20,10 +21,17 @@
     background: #f7f7f7 !important;
     font-size: 0.9em;
     padding: 0.8em;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1) !important; 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1) !important;
 }
+
+.active {
+    font-size: 0.9em;
+    padding: 0.8em;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
 @media (max-width: 600px) {
-   
+
     .table-mark {
         font-size: 0.6rem;
     }
@@ -31,7 +39,7 @@
     .option-buttons {
         border: 1px solid red;
         position: relative !important;
-        display: inline-block !important;    
+        display: inline-block !important;
     }
 
     .tool {
@@ -39,18 +47,43 @@
     }
 
     .navbar-toggler-icon {
-         color: #fff !important;
+        color: #fff !important;
     }
-
-
 
 }
 
 @media (max-width: 300px) {
-   
+
     .table-mark tr {
         font-size: 0.6em;
         width: 1em;
     }
+
+    .news-body {
+        justify-content: center;
+        margin: 0 5%;
+    }
+
+}
+
+/* NOVEDADES */
+
+.news-body {
+    justify-content: center;
+    margin: 0 15%;
+    position: relative;
+    height: 21rem;
+    overflow: auto;
+}
+
+.news-content {
+
+    font-size: 1.1em;
+}
+
+.box-content {
+    padding: 0.5em;
+    width: 100%;
+    word-wrap: break-word;
 
 }
