@@ -36,6 +36,12 @@
   border-radius: 5em !important;
 }
 
+.custom-buttons-small {
+  margin: 1em 0.5em;
+  padding: 0.15em 0.5em !important;
+  border-radius: 50% !important;
+}
+
 .custom-buttons-index, 
 .custom-button-next {
   background-color: #4285F4 !important;
