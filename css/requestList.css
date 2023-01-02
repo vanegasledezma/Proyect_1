@@ -6,8 +6,7 @@
 
 .table-mark, .table-mark-invoice {
     background-color: #fdfdfd;
-    padding: 1rem;
-    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%), inset 0 -1px 0 rgb(0 0 0 / 20%);
+    padding: 0.7rem;
     border-radius: 0.5em;
 }
 
@@ -55,6 +54,11 @@
         color: #fff !important;
     }
 
+    .form-control {
+        border: 1px solid red !important;
+
+    }
+
 }
 
 @media (max-width: 300px) {
@@ -95,3 +99,18 @@
 
 /* DINAMIC FORM */ 
 
+.labelInvoice {
+    box-shadow: 0 0.2rem 0.5rem rgb(0 0 0 / 10%), inset 0 -1px 0 rgb(0 0 0 / 5%);
+    width: 100%;
+    background-color: #fdfdfd;
+    padding: 0.7rem;
+    border-radius: 0.5em;
+    margin: 0.5em;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.row-inputs {
+    width: 100%;
+    margin: 0;
+}

@@ -107,7 +107,7 @@
             <!-- CONTENIDO -->
             <div class="container-fluid pt-5">
                 <div class="mb-5">
-                    <h3 class="text-center fw-semibold">Novedades</h3>
+                    <h3 class="text-center fw-semibold">Factura de servicio</h3>
                     <h5 class="news-id text-center text-success fw-bold">Solic. # 0001</h5>
                 </div>
                 <!--Formulario-->
@@ -115,50 +115,112 @@
                 <div class="container">
                     <div class="row">
                         <div class="control-group" id="fields">
-                            <label class="control-label" for="field1">Nice Multiple Form Fields</label>
-                            <div class="controls">
-                                <div class="row">
-                                    <div class="col">
-                                       Hola
+                            <label class="control-label fw-semibold" for="field1">Datos del usuario</label>
+                        </div>
+                        <div class="controls">
+                            <form id="formInvoice" class="justify-content-center" role="form" autocomplete="off">
+                                <div class="col-xs-3">
+                                    <div class="row row-inputs">
+                                        <div class="col-6">
+                                            <label for="message-text " class="col-form-label mt-2">Nombre</label>
+                                            <input required class="form-control table-mark-invoice labelInvoice" id="numElements"
+                                                name="numElements" type="text">
+                                        </div>
+                                        <div class="col-5">
+                                            <label for="message-text " class="col-form-label mt-2">#
+                                                Contacto</label>
+                                            <input class="form-control table-mark-invoice labelInvoice" id="numElements"
+                                                name="numElements" type="number">
+                                        </div>
+                                    </div>
+
+                                    <div class="row row-inputs">
+                                        <div class="col-5">
+                                            <label for="message-text " class="col-form-label">Direccion</label>
+                                            <input
+                                                class="form-control table-mark-invoice labelInvoice table-mark-invoice"
+                                                id="numElements" name="numElements" type="text">
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="message-text " class="col-form-label">Correo</label>
+                                            <input class="form-control table-mark-invoice labelInvoice" id="numElements"
+                                                name="numElements" type="mail">
+                                        </div>
+                                    </div>
+
+                                    <div class="row row-inputs justify-content-center pb-4">
+                                        <div class="col-4">
+                                            <label for="message-text " class="col-form-label">NIT</label>
+                                            <input
+                                                class="form-control table-mark-invoice labelInvoice table-mark-invoice"
+                                                id="numElements" name="numElements" type="text">
+                                        </div>
+                                        <div class="col-4">
+                                            <label for="message-text " class="col-form-label">Forma de pago</label>
+                                            <select id="inputState"
+                                                class="form-control table-mark-invoice labelInvoice">
+                                                <option selected>Selecciona...</option>
+                                                <option>Contado</option>
+                                                <option>Debito</option>
+                                                <option>Credito</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
-                                <form role="form" autocomplete="off">
-                                    <div class="entry input-group col-xs-3">
-                                        
-                                        <div class="col col-lg-1 m-2">
-                                            <input class="form-control table-mark-invoice" name="fields[]" type="text"
-                                                placeholder="Type something" />
-                                        </div>
-                                        <div class="col m-2">
-                                            <input class="form-control table-mark-invoice" name="fields[]" type="text"
-                                                placeholder="Type something" />
-                                        </div>
-                                        <div class="col-md-auto m-2">
-                                            <input class="form-control table-mark-invoice" name="fields[]" type="text"
-                                                placeholder="Type something" />
-                                        </div>
-                                        <div class="col-md-auto m-2">
-                                            <input class="form-control table-mark-invoice" name="fields[]" type="text"
-                                                placeholder="Type something" />
-                                        </div>
-
+                                <div class="entry input-group col-xs-3">
+                                    <div class="col col-lg-1 m-2">
+                                        <label class="labelInvoice" for="numberElement">#</label>
+                                    </div>
+                                    <div class="col-3 m-2">
+                                        <label class="labelInvoice" for="descriptionElement">Descripción</label>
+                                    </div>
+                                    <div class="col-3 m-2">
+                                        <label class="labelInvoice" for="numberElement">Cantidad</label>
+                                    </div>
+                                    <div class="col-3 m-2">
+                                        <label class="labelInvoice" for="numberElement">Precio</label>
+                                    </div>
+                                </div>
+                                <div class="entry input-group col-xs-3">
+                                    <div class="col col-lg-1 m-2">
+                                        <input id="numberElement" class="form-control table-mark-invoice"
+                                            name="fields[]" type="text" placeholder="Type something" />
+                                    </div>
+                                    <div class="col-3 m-2">
+                                        <input id="descriptionElement" class="form-control table-mark-invoice"
+                                            name="fields[]" type="text" placeholder="Type something" />
+                                    </div>
+                                    <div class="col-3 m-2">
+                                        <input class="form-control table-mark-invoice" name="fields[]" type="text"
+                                            placeholder="Type something" />
+                                    </div>
+                                    <div class="col-3 m-2">
+                                        <input class="form-control table-mark-invoice" name="fields[]" type="text"
+                                            placeholder="Type something" />
+                                    </div>
+                                    <div class="col-1">
                                         <span class="input-group-btn">
                                             <button class="btn btn-success btn-add custom-buttons-small" type="button">
                                                 <i class="fa-solid fa-plus fa-sm"></i>
                                             </button>
                                         </span>
                                     </div>
-
-                                </form>
-                                <br>
-                                <small>Press <span class="glyphicon glyphicon-plus gs"></span> to add another form field
-                                    :)</small>
+                                </div>
                             </div>
-                        </div>
+                                <div class="mb-3 pt-4 InvoiceButtons text-center">
+                                    <input type="button" id="botonAnterior"
+                                        class="custom-buttons custom-button-previous btn" value="Volver" />
+                                    <input type="submit" id="botonFinalizar"
+                                        class="submit custom-buttons btn-success btn fw-semibold" value="Hecho" />
+                                </div>
+                                <br>
+                            </form>
+                        
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!-- Javascript -->
@@ -208,7 +270,8 @@
                 newEntry.find('input').val('');
                 controlForm.find('.entry:not(:last) .btn-add')
                     .removeClass('btn-add').addClass('btn-remove')
-                    .removeClass('btn-success').addClass('btn-danger').addClass('custom-buttons-small')
+                    .removeClass('btn-success').addClass('btn-danger')
+                    .addClass('custom-buttons-small')
                     .html('<i class="fa-solid fa-minus"></i>');
             }).on('click', '.btn-remove', function (e) {
                 $(this).parents('.entry:first').remove();
