@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css"> 
+    <link rel="stylesheet" href="../css/home.css"> 
+    <link rel="stylesheet" href="../css/requestList.css">
+
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!--Button icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+
+
+</head>
+
+<body style="background-color: #f6f6f6;">
+
+    <!-- MENU COMPLETO -->
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar-->
+        <div class="border-end bg-white" id="sidebar-wrapper">
+
+            <div class="list-group list-group-flush">
+                <div class="side-inner text-center">
+                    <div class="perfil pb-4">
+                        <img src="../img/remote.png" alt="Image" class="img-fluid">
+                        <h4 class="name lead fw-semibold">Administrador</h4>
+                        <span class="country">Popayán, CO</span>
+                    </div>
+
+                </div>
+
+                <a class="list-group-item list-group-item-action list-group-item-light p-3 ml-4" href="#!">
+                    <i class="fa-solid fa-address-book fa-icon"></i>Usuarios
+                </a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="requestList.html">
+                    <i class="fa-solid fa-pen-to-square fa-icon"></i>Solicitudes
+                </a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Categories.html">
+                    <i class="fa-solid fa-table-cells-large fa-icon"></i>Categorias
+                </a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="invoiceList.html">
+                    <i class="fa-solid fa-file-lines fa-icon"></i>Facturación
+                </a>
+
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Calendar.html">
+                    <i class="fa-regular fa-calendar fa-icon"></i>Calendario
+                </a>
+                <div class="p-3">
+
+                </div>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">
+                    <i class="fa-solid fa-arrow-right-from-bracket fa-icon"></i>Cerrar sesión
+                </a>
+            </div>
+        </div>
+        <div id="page-content-wrapper">
+            <!-- Menu superior -->
+            <nav class="navbar navbar-expand-lg bd-navbar sticky-top">
+                <div class="container-fluid">
+                    <button class="btn custom-buttons mx-2 text-light" id="sidebarToggle">
+                        <i class="fa-regular fa-solid fa-ellipsis-vertical fa-lg"></i>
+                    </button>
+                    <a class="navbar-brand" href="#">Navbar</a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Normatividad">Alerta</a>
+                            </li>
+                        </ul>
+
+                        <!-- Opciones de usuario -->
+
+                        <li class="nav-item dropdown" style="padding: 0 6em 0 1em;list-style: none;">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Ajustes
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                                <button class="dropdown-item" type="button">Editar perfil</button>
+                                <button class="dropdown-item" type="button">Soporte</button>
+                                <hr class="dropdown-divider">
+                                <button class="dropdown-item" type="button">Cerrar sesión</button>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </nav>
+            <!-- CONTENIDO -->
+            <div class="container-fluid p-4 table-box">
+                <div>
+                    <h3 class="text-center p-4 fw-semibold">Usuarios</h3>
+                </div>
+                <div class="table-mark text-center active">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID Usuario</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Contacto</th>
+                                <th scope="col">Dirección</th>
+                                <th scope="col">Email</th>
+                                <th>Opcion</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">0001</th>
+                                <td>Pepito Perez</td>
+                                <td>2345654322</td>
+                                <td>Calle 3 2 76 b/El recuerdo</td>
+                                <td>pepitoperez@fdd.com.co</td>
+                                <td>
+                                    <div class="row text-center tool">
+                                        <div class="col-md">
+                                            <a href="#" data-toggle="tooltip" data-bs-toggle="modal"
+                                                data-bs-target="#userEditar" data-bs-id="0001"
+                                                data-bs-name="Pepito Perez" data-bs-contact="2345654322"
+                                                data-bs-dir="Calle 3 2 76 b/El recuerdo" data-bs-email="pepitoperez@fdd.com.co"
+                                                data-placement="top" title="Editar">
+                                                <i class="fa-solid fa-pencil" textarea="Editar"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Modal > ver -->
+                                    <div class="modal fade" id="NewUser" tabindex="-1" role="dialog"
+                                        aria-labelledby="NewUser">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title w-100 text-center" id="NewUserLabel">New
+                                                        message</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form>
+                                                        <div class="mb-3">
+                                                            <label for="message-text"
+                                                                class="col-form-label">Nombre</label>
+                                                            <input
+                                                                class="description-text form-control active"
+                                                                id="description-text" type="text">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="message-text"
+                                                                class="col-form-label">Dirección</label>
+                                                            <input
+                                                                class="description-text form-control active"
+                                                                id="description-text" type="text">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="message-text"
+                                                                class="col-form-label">No. Contacto</label>
+                                                            <input
+                                                                class="description-text form-control active"
+                                                                id="description-text" type="number">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="message-text"
+                                                                class="col-form-label">Correo</label>
+                                                            <input
+                                                                class="description-text form-control active"
+                                                                id="description-text" type="email">
+                                                        </div>
+                                                        
+                                                        <div class="mb-3">
+                                                            <label for="message-text"
+                                                                class="col-form-label">Rol</label>
+                                                            <select id="inputState" class="form-control mt-2 active">
+                                                                <option selected>Selecciona...</option>
+                                                                <option>Administrador</option>
+                                                                <option>Visitante</option>
+                                                                <option>Cliente</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="modal-footer" style="justify-content: center;">
+                                                            <button type="button"
+                                                                class="btn btn-primary custom-buttons">Guardar</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Modal de Editar -->
+
+                                    <div class="modal fade" id="userEditar" tabindex="-1" role="dialog"
+                                        aria-labelledby="userEditar">
+                                        <div class="modal-dialog modal-l">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title w-100" id="userEditarLabel">New
+                                                        message</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form>
+                                                        <div class="mb-3">
+                                                            <label for="name"
+                                                                class="col-form-label">Nombre</label>
+                                                            <input
+                                                                class="name form-control active"
+                                                                id="name" type="text">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="dir"
+                                                                class="col-form-label">Dirección</label>
+                                                            <input
+                                                                class="dir form-control active"
+                                                                id="dir" type="text">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="contact"
+                                                                class="col-form-label">No. Contacto</label>
+                                                            <input
+                                                                class="contact form-control active"
+                                                                id="contact" type="number">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="email"
+                                                                class="col-form-label">Correo</label>
+                                                            <input
+                                                                class="email form-control active"
+                                                                id="email" type="email">
+                                                        </div>
+                                                        
+                                                        <div class="mb-3">
+                                                            <label for="message-text"
+                                                                class="col-form-label">Rol</label>
+                                                            <select id="inputState" class="form-control mt-2 active">
+                                                                <option selected>Selecciona...</option>
+                                                                <option>Administrador</option>
+                                                                <option>Visitante</option>
+                                                                <option>Cliente</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="modal-footer" style="justify-content: center;">
+                                                            <button type="button"
+                                                                class="btn btn-primary custom-buttons">Guardar</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">0002</th>
+                                <td>Arnulfo hernandez</td>
+                                <td>123453465</td>
+                                <td>Calle 3 2 76 b/El recuerdo</td>
+                                <td>bbbbb@fdd.com.co</td>
+                                <td>
+                                    <div class="row text-center">
+                                        <div class="col">
+                                            <i class="fa-solid fa-pencil" textarea="Editar"></i>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">0003</th>
+                                <td>Clara Torres</td>
+                                <td>234567654</td>
+                                <td>Calle 3 2 76 b/El recuerdo</td>
+                                <td>ccccc@fdd.com.co</td>
+                                <td>
+                                    <div class="row text-center">
+                                        <div class="col">
+                                            <i class="fa-solid fa-pencil" textarea="Editar"></i>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">0004</th>
+                                <td>Ejemplo2</td>
+                                <td>Sarah Gonzalez</td>
+                                <td>Calle 3 2 76 b/El recuerdo</td>
+                                <td>aaaaaaaaaa@fdd.com.co</td>
+                                <td>
+                                    <div class="row text-center">
+                                        <div class="col">
+                                            <i class="fa-solid fa-pencil" textarea="Editar"></i>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">0005</th>
+                                <td>asdasfmshdfbksdjf</td>
+                                <td>23454656</td>
+                                <td>Calle 4 33 43 b/El recuerdo</td>
+                                <td>ddfsdw@fdd.com.co</td>
+                                <td>
+                                    <div class="row text-center">
+                                        <div class="col">
+                                            <i class="fa-solid fa-pencil" textarea="Editar"></i>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">0006</th>
+                                <td>Anddf uddfd</td>
+                                <td class="text-warning">(Sin registrar)</td>
+                                <td>Calle 1 1 76 b/El recuerdo</td>
+                                <td>aaaaaaaaaa@fdd.com.co</td>
+                                <td>
+                                    <div class="row text-center">
+                                        <div class="col">
+                                            <i class="fa-solid fa-pencil" textarea="Editar"></i>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                </div>
+            </div>
+            <div class="container text-end w-100">
+                <a href="#" data-toggle="tooltip" data-bs-toggle="modal"
+                    data-bs-target="#NewUser" title="Nuevo">
+               
+                    <input type="submit" id="botonFinalizar" class="submit custom-buttons btn-success btn" value="Nuevo" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js"
+        integrity="sha384-q9CRHqZndzlxGLOj+xrdLDJa9ittGte1NksRmgJKeCV9DrM7Kz868XYqsKWPpAmn"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script>
+        /*!
+        * Start Bootstrap - Simple Sidebar v6.0.5 (https://startbootstrap.com/template/simple-sidebar)
+        * Copyright 2013-2022 Start Bootstrap
+        * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-simple-sidebar/blob/master/LICENSE)
+        */
+        // 
+        // Scripts
+        // 
+
+        window.addEventListener('DOMContentLoaded', event => {
+
+            // Toggle the side navigation
+            const sidebarToggle = document.body.querySelector('#sidebarToggle');
+            if (sidebarToggle) {
+                // Uncomment Below to persist sidebar toggle between refreshes
+                // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
+                //     document.body.classList.toggle('sb-sidenav-toggled');
+                // }
+                sidebarToggle.addEventListener('click', event => {
+                    event.preventDefault();
+                    document.body.classList.toggle('sb-sidenav-toggled');
+                    localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
+                });
+            }
+
+        });
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
+        var NewUser = document.getElementById('NewUser')
+        NewUser.addEventListener('show.bs.modal', function (event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            const id = button.getAttribute('data-bs-id')
+           
+            // Update the modal's content.
+            var modalTitle = NewUser.querySelector('.modal-title')
+
+            //modalTitle.classList.add("text-success")
+            modalTitle.textContent = 'Nuevo usuario'
+    
+
+        })
+
+        var userEditar = document.getElementById('userEditar')
+        userEditar.addEventListener('show.bs.modal', function (event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            const id = button.getAttribute('data-bs-id')
+            const name = button.getAttribute('data-bs-name')
+            const contact = button.getAttribute('data-bs-contact')
+            const dir = button.getAttribute('data-bs-dir')
+            const email = button.getAttribute('data-bs-email')
+            // and then do the updating in a callback.
+            //
+            // Update the modal's content.
+            var modalTitle = userEditar.querySelector('.modal-title')
+            var descriptionText = userEditar.querySelector('.name')
+
+            //modalTitle.classList.add("text-success"
+            modalTitle.textContent = 'Editar usuario ( # '+ id + ' )'
+            document.getElementById("name").value = name;
+            document.getElementById("contact").value = contact;
+            document.getElementById("dir").value = dir;
+            document.getElementById("email").value = email;
+        })
+
+    </script>
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js"
+        integrity="sha384-q9CRHqZndzlxGLOj+xrdLDJa9ittGte1NksRmgJKeCV9DrM7Kz868XYqsKWPpAmn"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

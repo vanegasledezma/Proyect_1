@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/requestList.css">
+
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!--Button icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- Color Picker -->
+
+
+
+
+
+
+</head>
+
+<body style="background-color: #f6f6f6;">
+
+    <!-- MENU COMPLETO -->
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar-->
+        <div class="border-end bg-white" id="sidebar-wrapper">
+
+            <div class="list-group list-group-flush">
+                <div class="side-inner text-center">
+                    <div class="perfil pb-4">
+                        <img src="../img/remote.png" alt="Image" class="img-fluid">
+                        <h4 class="name lead fw-semibold">Administrador</h4>
+                        <span class="country">Popayán, CO</span>
+                    </div>
+
+                </div>
+
+                <a class="list-group-item list-group-item-action list-group-item-light p-3 ml-4" href="userList.html">
+                    <i class="fa-solid fa-address-book fa-icon"></i>Usuarios
+                </a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="requestList.html">
+                    <i class="fa-solid fa-pen-to-square fa-icon"></i>Solicitudes
+                </a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Categories.html">
+                    <i class="fa-solid fa-table-cells-large fa-icon"></i>Categorias
+                </a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#">
+                    <i class="fa-solid fa-file-lines fa-icon"></i>Facturación
+                </a>
+
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="Calendar.html">
+                    <i class="fa-regular fa-calendar fa-icon"></i>Calendario
+                </a>
+                <div class="p-3">
+
+                </div>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">
+                    <i class="fa-solid fa-arrow-right-from-bracket fa-icon"></i>Cerrar sesión
+                </a>
+            </div>
+        </div>
+        <div id="page-content-wrapper">
+            <!-- Menu superior -->
+            <nav class="navbar navbar-expand-lg bd-navbar sticky-top ">
+                <div class="container-fluid">
+                    <button class="btn custom-buttons mx-2 text-light" id="sidebarToggle">
+                        <i class="fa-regular fa-solid fa-ellipsis-vertical fa-lg"></i>
+                    </button>
+                    <a class="navbar-brand" href="#">Navbar</a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Normatividad">Alerta</a>
+                            </li>
+                        </ul>
+
+                        <!-- Opciones de usuario -->
+
+                        <li class="nav-item dropdown" style="padding: 0 6em 0 1em;list-style: none;">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Ajustes
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                                <button class="dropdown-item" type="button">Editar perfil</button>
+                                <button class="dropdown-item" type="button">Soporte</button>
+                                <hr class="dropdown-divider">
+                                <button class="dropdown-item" type="button">Cerrar sesión</button>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </nav>
+            <!-- CONTENIDO -->
+            <div class="container-fluid pt-5">
+                <div class="mb-5">
+                    <h3 class="text-center fw-semibold">Facturación</h3>
+                </div>
+                <div class="table-mark news-body active p-3">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th colspan="3" scope="col"># </th>
+                                <th>Detalles</th>
+                                <th scope="col"></th>
+
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th colspan="3"  scope="col-5">Arnulfo Gonzales 
+                                                <br><span class="text-success">Pagado</span></th>   
+                                <th scope="col-5" >$ 80.000
+                                    <br><span class="text-secondary">20-09-2022</span></th>
+                                <th>
+                                    <div class="col-2">
+                                        <a href="#" data-toggle="tooltip" data-bs-toggle="modal"
+                                            data-bs-target="#modalEditar" data-bs-whatever="Registrada"
+                                            data-placement="top" title="Editar">
+                                            <i class="fa-solid fa-eye" textarea="Editar"></i>
+                                        </a>
+                                    </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="modalEditar" tabindex="-1" role="dialog"
+                                        aria-labelledby="modalEditar">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title w-100 text-center" id="modalEditarLabel">New
+                                                        message</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form>
+                                                        <div class="container mb-3 text-center table-mark m-1">
+                                                            <div class="row">
+
+                                                                <div class="col-6">
+                                                                    <label for="category-name" class="col-form-label mb-2">Nombre</label>
+                                                                    <input class="form-control category-name" id="category-name" name="category-name" type="text">
+                                                                </div>
+                                                                <div class="col-6">
+                                                                        <label for="GFG_Color" class="form-label mt-2">
+                                                                        Seleccionar color
+                                                                        </label>
+                                                                        <input type="color" class="m-auto
+                                                                        form-control form-control-color mt-1"
+                                                                        id="GFG_Color" value="#39EDCD">
+                                                                </div>
+                                                            </div>
+
+                                                        <div class="pt-4" style="justify-content: center;">
+                                                            <button type="button"
+                                                                class="btn btn-primary custom-buttons">Guardar</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </th>
+                                <tr>
+                                    <th colspan="3"  scope="col-5">sarah Valentina 
+                                                    <br><span class="text-warning">Pdte de pago</span></th>   
+                                    <th scope="col-5" >$ 80.000
+                                        <br><span class="text-secondary">20-09-2022</span></th>
+                                    <th>
+                                        <div class="col-2">
+                                            <a href="#" data-toggle="tooltip" data-bs-toggle="modal"
+                                                data-bs-target="#modalEditar" data-bs-whatever="Registrada"
+                                                data-placement="top" title="Editar">
+                                                <i class="fa-solid fa-eye" textarea="Editar"></i>
+                                            </a>
+                                        </div>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th colspan="3"  scope="col-5">sarah Valentina 
+                                                    <br><span class="text-danger">En mora</span></th>   
+                                    <th scope="col-5" >$ 80.000
+                                        <br><span class="text-secondary">20-09-2022</span></th>
+                                    <th>
+                                        <div class="col-2">
+                                            <a href="#" data-toggle="tooltip" data-bs-toggle="modal"
+                                                data-bs-target="#modalEditar" data-bs-whatever="Registrada"
+                                                data-placement="top" title="Editar">
+                                                <i class="fa-solid fa-eye" textarea="Editar"></i>
+                                            </a>
+                                        </div>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th colspan="3"  scope="col-5">Arnulfo Gonzales 
+                                                    <br><span class="text-info">Cobrar en sitio</span></th>   
+                                    <th scope="col-5" >$ 80.000
+                                        <br><span class="text-secondary">20-09-2022</span></th>
+                                    <th>
+                                        <div class="col-2">
+                                            <a href="#" data-toggle="tooltip" data-bs-toggle="modal"
+                                                data-bs-target="#modalEditar" data-bs-whatever="Registrada"
+                                                data-placement="top" title="Editar">
+                                                <i class="fa-solid fa-eye" textarea="Editar"></i>
+                                            </a>
+                                        </div>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th colspan="3"  scope="col-5">Arnulfo Gonzales 
+                                                    <br><span class="text-primary">Transferido</span></th>   
+                                    <th scope="col-5" >$ 80.000
+                                        <br><span class="text-secondary">20-09-2022</span></th>
+                                    <th>
+                                        <div class="col-2">
+                                            <a href="#" data-toggle="tooltip" data-bs-toggle="modal"
+                                                data-bs-target="#modalEditar" data-bs-whatever="Registrada"
+                                                data-placement="top" title="Editar">
+                                                <i class="fa-solid fa-eye" textarea="Editar"></i>
+                                            </a>
+                                        </div>
+                                    </th>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js"
+        integrity="sha384-q9CRHqZndzlxGLOj+xrdLDJa9ittGte1NksRmgJKeCV9DrM7Kz868XYqsKWPpAmn"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script>
+        /*!
+        * Start Bootstrap - Simple Sidebar v6.0.5 (https://startbootstrap.com/template/simple-sidebar)
+        * Copyright 2013-2022 Start Bootstrap
+        * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-simple-sidebar/blob/master/LICENSE)
+        */
+        // 
+        // Scripts
+        // 
+
+        window.addEventListener('DOMContentLoaded', event => {
+
+            // Toggle the side navigation
+            const sidebarToggle = document.body.querySelector('#sidebarToggle');
+            if (sidebarToggle) {
+                // Uncomment Below to persist sidebar toggle between refreshes
+                // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
+                //     document.body.classList.toggle('sb-sidenav-toggled');
+                // }
+                sidebarToggle.addEventListener('click', event => {
+                    event.preventDefault();
+                    document.body.classList.toggle('sb-sidenav-toggled');
+                    localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
+                });
+            }
+
+        });
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
+        var modalEditar = document.getElementById('modalEditar')
+        modalEditar.addEventListener('show.bs.modal', function (event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            const recipient = button.getAttribute('data-bs-whatever')
+            // If necessary, you could initiate an AJAX request here
+            // and then do the updating in a callback.
+            //
+            // Update the modal's content.
+            var modalTitle = modalEditar.querySelector('.modal-title')
+            var descriptionText = modalEditar.querySelector('.category-name')
+
+            //modalTitle.classList.add("text-success")
+            modalTitle.textContent = 'Editar categoria'
+            document.getElementById("category-name").value = recipient;
+
+        })
+
+        var modalCategoriaEditar = document.getElementById('modalCategoriaEditar')
+        modalCategoriaEditar.addEventListener('show.bs.modal', function (event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            var element = button.getAttribute('data-bs-catElement')
+
+            // If necessary, you could initiate an AJAX request here
+            // and then do the updating in a callback.
+            //
+            // Update the modal's content.
+            var modalTitle = modalEditar.querySelector('.modal-title')
+            var descriptionText = modalEditar.querySelector('.categoryElement-name')
+
+            //modalTitle.classList.add("text-success")
+            modalTitle.textContent = 'Editar categoria'
+            document.getElementById("categoryElement-name").value = element;
+
+        })
+
+        var modalEditarElemento = document.getElementById('modalEditarElemento')
+        modalEditarElemento.addEventListener('show.bs.modal', function (event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            const nameElement = button.getAttribute('data-bs-nameElement')
+            // If necessary, you could initiate an AJAX request here
+            // and then do the updating in a callback.
+            //
+            // Update the modal's content.
+            var modalTitle = modalEditarElemento.querySelector('.modal-title')
+            var descriptionText = modalEditarElemento.querySelector('.Element-name')
+
+            //modalTitle.classList.add("text-success")
+            modalTitle.textContent = 'Editar elemento'
+            document.getElementById("Element-name").value = nameElement;
+
+        })
+    </script>
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js"
+        integrity="sha384-q9CRHqZndzlxGLOj+xrdLDJa9ittGte1NksRmgJKeCV9DrM7Kz868XYqsKWPpAmn"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
