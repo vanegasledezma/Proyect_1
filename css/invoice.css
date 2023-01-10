@@ -1,0 +1,47 @@
+/* PARTES DE LA FACTURA */
+
+.invoiceBody {
+margin-top: 1em;
+padding: 1.2em;
+}
+.invoiceBox {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4), 0 3px 6px rgba(0, 0, 0, 0.4) !important;
+    border-radius: 0.6em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+}
+
+.invoiceLogo {
+    text-align: center;
+    }
+
+.invoiceLogo img {
+justify-content: center !important;
+max-width: 4em;
+
+}
+
+.invoiceRow {
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-gap: 10px; /* Adds gap of 16px for both rows and columns */
+}
+
+.invoiceNumber {
+    background: #f7f7f7 !important;
+    font-size: 0.9em;
+    padding-top: 2em;
+    vertical-align:middle;
+}
+
+.invoiceDateContent{ 
+    padding: 0.6em;
+    font-size: 0.9em;
+    word-wrap: break-word; 
+}
+
+.table-bordered {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4), 0 3px 6px rgba(0, 0, 0, 0.4) !important;
+    border-radius: 0.6em;
+}

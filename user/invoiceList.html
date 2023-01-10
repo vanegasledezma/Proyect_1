@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/requestList.css">
+    <link rel="stylesheet" href="../css/invoice.css">
 
     <title>Document</title>
 
@@ -127,10 +128,231 @@
 
                         <tbody>
                             <tr>
-                                <th colspan="3"  scope="col-5">Arnulfo Gonzales 
-                                                <br><span class="text-success">Pagado</span></th>   
-                                <th scope="col-5" >$ 80.000
-                                    <br><span class="text-secondary">20-09-2022</span></th>
+                                <th colspan="3" scope="col-5">Arnulfo Gonzales
+                                    <br><span class="text-success">Pagado</span>
+                                </th>
+                                <th scope="col-5">$ 80.000
+                                    <br><span class="text-secondary">20-09-2022</span>
+                                </th>
+                                <th>
+                                    <div class="col-2">
+                                        <a href="#" data-toggle="tooltip" data-bs-toggle="modal"
+                                            data-bs-target="#lookInvoice" data-bs-whatever="Registrada"
+                                            data-placement="top" title="Editar">
+                                            <i class="fa-solid fa-eye" textarea="Editar"></i>
+                                        </a>
+                                    </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="lookInvoice" tabindex="-1" role="dialog"
+                                        aria-labelledby="lookInvoice">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="invoiceBody">
+                                                    <form>
+                                                        <div class="container">
+                                                            <div class="row">
+                                                                <table class="table table-hover text-decoration-none invoiceDateContent">
+                                                                    <tbody>
+                                                                        <tr class="border-0">
+                                                                            <td class="border-0 col-8 text-center invoiceLogo">
+                                                                                <img src="../img/logo.png">
+                                                                            </td>
+                                                                            <td class="col-4 border-0 table-bordered text-center">
+                                                                                <h5 style="font-size: 1em;">Factura No.
+                                                                                </h5>
+                                                                                <span>0001</span>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="row gx-1">
+                                                                <div class="col ps-2">
+                                                                    <div class="item">
+                                                                        <div class="invoiceBox invoiceDate pe-2">
+                                                                            <div class="invoiceDateContent">
+                                                                                <span>Señores</span>
+                                                                                <br>
+                                                                                <span>NIT</span>
+                                                                                <br>
+                                                                                <span>Dirección</span>
+                                                                            </div>
+
+                                                                            <div class="invoiceDateContent">
+                                                                                <span class="fw-normal">Señores</span>
+                                                                                <br>
+                                                                                <span class="fw-normal">NIT</span>
+                                                                                <br>
+                                                                                <span class="fw-normal">Dirección</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col pe-2">
+                                                                    <div class="item">
+                                                                        <div class="invoiceBox invoiceDate">
+                                                                            <div class="invoiceDateContent">
+                                                                                <span>Señores</span>
+                                                                                <br>
+                                                                                <span>NIT</span>
+                                                                                <br>
+                                                                                <span>Dirección</span>
+                                                                            </div>
+
+                                                                            <div class="invoiceDateContent">
+                                                                                <span class="fw-normal">Señores</span>
+                                                                                <br>
+                                                                                <span class="fw-normal">NIT</span>
+                                                                                <br>
+                                                                                <span class="fw-normal">Dirección</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col p-0">
+                                                                    <div class="item">
+                                                                        <table class="table table-bordered table-hover invoiceDateContent">
+                                                                            <thead class="text-center">
+                                                                                <th class="col-md">Fecha factura</th>
+                                                                            <th class="col-md">Fecha venc.</th>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td class="text-center">
+                                                                                        <h5 style="font-size: 1em;">12-08-2022</h5>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <h5 style="font-size: 1em;">14-08-2022
+                                                                                        </h5>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row mt-2">
+                                                                <table
+                                                                    class="table table-bordered table-hover invoiceDateContent">
+                                                                    <thead class="text-center">
+                                                                        <tr>
+                                                                            <th class="col-md">Item</th>
+                                                                            <th class="col-md">Descripción</th>
+                                                                            <th class="col-md">Cantidad</th>
+                                                                            <th class="col-md">Total</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="text-center">
+                                                                                <h5 style="font-size: 1em;">1</h5>
+                                                                            </td>
+                                                                            <td>
+                                                                                <h5 style="font-size: 1em;">Disco Duro
+                                                                                    SSD 1Tb Toshiba - serie 34345454rff3
+                                                                                </h5>
+                                                                            </td>
+                                                                            <td class="text-end">
+                                                                                <h5 style="font-size: 1em;">1.00</h5>
+                                                                            </td>
+                                                                            <td class="text-end">
+                                                                                <h5 style="font-size: 1em;">$ 300.000
+                                                                                </h5>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">
+                                                                                <h5 style="font-size: 1em;">2</h5>
+                                                                            </td>
+                                                                            <td>
+                                                                                <h5 style="font-size: 1em;">Instalación
+                                                                                    de Disco Duro SSD</h5>
+                                                                            </td>
+                                                                            <td class="text-end">
+                                                                                <h5 style="font-size: 1em;">1.00</h5>
+                                                                            </td>
+                                                                            <td class="text-end">
+                                                                                <h5 style="font-size: 1em;">$ 60.000
+                                                                                </h5>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+
+                                                            <div class="row justify-content-between">
+                                                                <div class="col-7 invoiceDate">
+                                                                    <div class="invoiceDateContent">
+                                                                        <span>Valor en letras:</span><br>
+                                                                        <span class="fw-normal">Trescientos sesenta y ocho mil pesos</span>
+                                                                        <br>
+                                                                        <span>Medios de pago:</span><br>
+                                                                        <span class="fw-normal">Efectivo</span>
+                                                                        <br>
+                                                                        <span>Observaciones</span><br>
+                                                                        <span class="fw-normal">Ninguna ---- </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    <table
+                                                                    class="table table-bordered table-hover invoiceDateContent">
+                                                                    
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="text-center">
+                                                                                <h5 style="font-size: 1em;">Subtotal</h5>
+                                                                            </td>
+                                                                            <td class="text-center">
+                                                                                <h5 style="font-size: 1em;">360.000</h5>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">
+                                                                                <h5 style="font-size: 1em;">IVA (19%)</h5>
+                                                                            </td>
+                                                                            <td class="text-center">
+                                                                                <h5 style="font-size: 1em;">68.400</h5>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>                                                                        <tr>
+                                                                            <td class="text-center">
+                                                                                <h5 style="font-size: 1em;">Retefuente (2,5%)</h5>
+                                                                            </td>
+                                                                            <td class="text-center">
+                                                                                <h5 style="font-size: 1em;">0</h5>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                    <tfoot class="text-center">
+                                                                        <tr>
+                                                                            <th class="col-md">TOTAL</th>
+                                                                            <th class="col-md">368.400</th>
+                                                                        </tr>
+                                                                    </tfoot>
+                                                                </table>
+                                                                </div>
+                                                              </div>
+                                                            <div class="pt-4 text-center">
+                                                                <button type="button"
+                                                                    class="btn btn-primary custom-buttons">Enviar</button>
+                                                                    <button type="button"
+                                                                    class="btn btn-secondary custom-buttons">Imprimir</button>
+                                                            </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </th>
+                            <tr>
+                                <th colspan="3" scope="col-5">sarah Valentina
+                                    <br><span class="text-warning">Pdte de pago</span>
+                                </th>
+                                <th scope="col-5">$ 80.000
+                                    <br><span class="text-secondary">20-09-2022</span>
+                                </th>
                                 <th>
                                     <div class="col-2">
                                         <a href="#" data-toggle="tooltip" data-bs-toggle="modal"
@@ -139,108 +361,59 @@
                                             <i class="fa-solid fa-eye" textarea="Editar"></i>
                                         </a>
                                     </div>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="modalEditar" tabindex="-1" role="dialog"
-                                        aria-labelledby="modalEditar">
-                                        <div class="modal-dialog modal-lg">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title w-100 text-center" id="modalEditarLabel">New
-                                                        message</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <form>
-                                                        <div class="container mb-3 text-center table-mark m-1">
-                                                            <div class="row">
-
-                                                                <div class="col-6">
-                                                                    <label for="category-name" class="col-form-label mb-2">Nombre</label>
-                                                                    <input class="form-control category-name" id="category-name" name="category-name" type="text">
-                                                                </div>
-                                                                <div class="col-6">
-                                                                        <label for="GFG_Color" class="form-label mt-2">
-                                                                        Seleccionar color
-                                                                        </label>
-                                                                        <input type="color" class="m-auto
-                                                                        form-control form-control-color mt-1"
-                                                                        id="GFG_Color" value="#39EDCD">
-                                                                </div>
-                                                            </div>
-
-                                                        <div class="pt-4" style="justify-content: center;">
-                                                            <button type="button"
-                                                                class="btn btn-primary custom-buttons">Guardar</button>
-                                                        </div>
-                                                    </form>
-                                                </div>
-
-
-                                            </div>
-                                        </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th colspan="3" scope="col-5">sarah Valentina
+                                    <br><span class="text-danger">En mora</span>
+                                </th>
+                                <th scope="col-5">$ 80.000
+                                    <br><span class="text-secondary">20-09-2022</span>
+                                </th>
+                                <th>
+                                    <div class="col-2">
+                                        <a href="#" data-toggle="tooltip" data-bs-toggle="modal"
+                                            data-bs-target="#modalEditar" data-bs-whatever="Registrada"
+                                            data-placement="top" title="Editar">
+                                            <i class="fa-solid fa-eye" textarea="Editar"></i>
+                                        </a>
                                     </div>
                                 </th>
-                                <tr>
-                                    <th colspan="3"  scope="col-5">sarah Valentina 
-                                                    <br><span class="text-warning">Pdte de pago</span></th>   
-                                    <th scope="col-5" >$ 80.000
-                                        <br><span class="text-secondary">20-09-2022</span></th>
-                                    <th>
-                                        <div class="col-2">
-                                            <a href="#" data-toggle="tooltip" data-bs-toggle="modal"
-                                                data-bs-target="#modalEditar" data-bs-whatever="Registrada"
-                                                data-placement="top" title="Editar">
-                                                <i class="fa-solid fa-eye" textarea="Editar"></i>
-                                            </a>
-                                        </div>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th colspan="3"  scope="col-5">sarah Valentina 
-                                                    <br><span class="text-danger">En mora</span></th>   
-                                    <th scope="col-5" >$ 80.000
-                                        <br><span class="text-secondary">20-09-2022</span></th>
-                                    <th>
-                                        <div class="col-2">
-                                            <a href="#" data-toggle="tooltip" data-bs-toggle="modal"
-                                                data-bs-target="#modalEditar" data-bs-whatever="Registrada"
-                                                data-placement="top" title="Editar">
-                                                <i class="fa-solid fa-eye" textarea="Editar"></i>
-                                            </a>
-                                        </div>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th colspan="3"  scope="col-5">Arnulfo Gonzales 
-                                                    <br><span class="text-info">Cobrar en sitio</span></th>   
-                                    <th scope="col-5" >$ 80.000
-                                        <br><span class="text-secondary">20-09-2022</span></th>
-                                    <th>
-                                        <div class="col-2">
-                                            <a href="#" data-toggle="tooltip" data-bs-toggle="modal"
-                                                data-bs-target="#modalEditar" data-bs-whatever="Registrada"
-                                                data-placement="top" title="Editar">
-                                                <i class="fa-solid fa-eye" textarea="Editar"></i>
-                                            </a>
-                                        </div>
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th colspan="3"  scope="col-5">Arnulfo Gonzales 
-                                                    <br><span class="text-primary">Transferido</span></th>   
-                                    <th scope="col-5" >$ 80.000
-                                        <br><span class="text-secondary">20-09-2022</span></th>
-                                    <th>
-                                        <div class="col-2">
-                                            <a href="#" data-toggle="tooltip" data-bs-toggle="modal"
-                                                data-bs-target="#modalEditar" data-bs-whatever="Registrada"
-                                                data-placement="top" title="Editar">
-                                                <i class="fa-solid fa-eye" textarea="Editar"></i>
-                                            </a>
-                                        </div>
-                                    </th>
-                                </tr>
+                            </tr>
+                            <tr>
+                                <th colspan="3" scope="col-5">Arnulfo Gonzales
+                                    <br><span class="text-info">Cobrar en sitio</span>
+                                </th>
+                                <th scope="col-5">$ 80.000
+                                    <br><span class="text-secondary">20-09-2022</span>
+                                </th>
+                                <th>
+                                    <div class="col-2">
+                                        <a href="#" data-toggle="tooltip" data-bs-toggle="modal"
+                                            data-bs-target="#modalEditar" data-bs-whatever="Registrada"
+                                            data-placement="top" title="Editar">
+                                            <i class="fa-solid fa-eye" textarea="Editar"></i>
+                                        </a>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th colspan="3" scope="col-5">Arnulfo Gonzales
+                                    <br><span class="text-primary">Transferido</span>
+                                </th>
+                                <th scope="col-5">$ 80.000
+                                    <br><span class="text-secondary">20-09-2022</span>
+                                </th>
+                                <th>
+                                    <div class="col-2">
+                                        <a href="#" data-toggle="tooltip" data-bs-toggle="modal"
+                                            data-bs-target="#modalEditar" data-bs-whatever="Registrada"
+                                            data-placement="top" title="Editar">
+                                            <i class="fa-solid fa-eye" textarea="Editar"></i>
+                                        </a>
+                                    </div>
+                                </th>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -286,8 +459,8 @@
             $('[data-toggle="tooltip"]').tooltip()
         })
 
-        var modalEditar = document.getElementById('modalEditar')
-        modalEditar.addEventListener('show.bs.modal', function (event) {
+        var lookInvoice = document.getElementById('lookInvoice')
+        lookInvoice.addEventListener('show.bs.modal', function (event) {
             // Button that triggered the modal
             var button = event.relatedTarget
             // Extract info from data-bs-* attributes
@@ -296,8 +469,8 @@
             // and then do the updating in a callback.
             //
             // Update the modal's content.
-            var modalTitle = modalEditar.querySelector('.modal-title')
-            var descriptionText = modalEditar.querySelector('.category-name')
+            var modalTitle = lookInvoice.querySelector('.modal-title')
+            var descriptionText = lookInvoice.querySelector('.category-name')
 
             //modalTitle.classList.add("text-success")
             modalTitle.textContent = 'Editar categoria'
