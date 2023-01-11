@@ -45,3 +45,31 @@ max-width: 4em;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4), 0 3px 6px rgba(0, 0, 0, 0.4) !important;
     border-radius: 0.6em;
 }
+
+
+@media (max-width: 769px) {
+    .invoiceBody {
+        font-size: 0.8em;
+        }
+        .invoiceVenc {
+            padding-top: 1em;
+        }
+    
+}
+
+@media (max-width: 481px) {
+
+        .invoiceVenc {
+            padding-top: 1em;
+        }
+        .invoiceTotal {
+        font-size: 0.8em;
+         }
+    
+}
+
+@media (max-width: 300px) {
+    .invoiceBody {
+        font-size: 0.8em;
+        }
+}
